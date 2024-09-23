@@ -24,7 +24,7 @@
       };
     </script> -->
   </head>
-  <body class="max-w-screen-xl mx-auto">
+  <body class="max-w-screen-xl mx-auto ">
     <nav class="sticky top-5 bg-teal-200 p-5 shadow-lg z-10 opacity-90">
       <header>
         <div class="flex justify-between m-8">
@@ -85,7 +85,7 @@
               <br />
 
               <button
-                onclick="donateMoney(this)"
+                onclick="openModal('donateNow')"
                 id="donateNow"
                 class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg"
               >
@@ -133,7 +133,7 @@
               <br />
 
               <button
-                onclick="donateMoney(this)"
+                onclick="openModal('donateNowFeni')"
                 id="donateNowFeni"
                 class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg"
               >
@@ -190,30 +190,31 @@
               <br />
 
               <button
-                onclick="donateMoney(this)"
+                onclick="openModal('quotaDonate')"
                 id="quotaDonate"
                 class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg"
               >
                 Donate Now
               </button>
-              <dialog id="my_modal_3" class="modal">
-                <div class="modal-box">
-                  <form method="dialog">
-                    <div class="text-center">
-                      <h3 class="text-lg font-bold">Hello!</h3>
-                      <p class="py-4">
-                        Press ESC key or click on ✕ button to close
-                      </p>
-                      <button
-                        id="btn-continue"
-                        class="btn btn-sm  btn-success "
-                      >
-                        Continue
-                      </button>
             </div>
           </div>
         </div>
       </section>
+
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box text-center my-5">
+          <h3 class="font-bold text-4xl">Congratulations!</h3>
+          <img src="./img/coin.png" class="w-6 h-6 mx-auto" alt="coin" />
+          <span
+            >Your Donation Has been Proceed <br>
+            <h3 class="text-4xl text-green-500">Successfully</h3></span
+          >
+
+          <div ">
+            <button class="btn btn-ghost text-center w-1/2 my-5 bg-slate-200" onclick="confirmDonation()">Confirm Donate</button>
+          </div>
+        </div>
+      </dialog>
     </main>
     <script src="donate.js"></script>
   </body>
