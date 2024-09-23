@@ -25,7 +25,7 @@
     </script> -->
   </head>
   <body class="max-w-screen-xl mx-auto ">
-    <nav class="sticky top-5 bg-teal-200 p-5 shadow-lg z-10 opacity-90">
+    <nav class="sticky top-5 bg-transparent p-5 shadow-lg z-10 bg-opacity-100">
       <header>
         <div class="flex justify-between m-8">
           <button id="blog" class="btn btn-primary">Blog</button>
@@ -47,7 +47,7 @@
       </div>
     </nav>
     <main>
-      <section>
+      ><section id="donation-section-1" class="donation-section" 
         <div class="hero bg-base-200 my-14 gap-5">
           <div class="hero-content flex-col lg:flex-row">
             <img
@@ -61,7 +61,7 @@
                 <p id="noakhaliFloodDonate">00</p>
                 <span>BDT</span>
               </div>
-              <h1 class="text-3xl font-bold">
+              <h1 class="text-3xl font-bold" id="title-noakhali">
                 Donate for Flood at Noakhali, Bangladesh
               </h1>
               <p class="py-6">
@@ -96,7 +96,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="donation-section-2" class="donation-section" >
         <div class="hero bg-base-200 gap-5">
           <div class="hero-content flex-col lg:flex-row">
             <img
@@ -110,7 +110,7 @@
                 <p id="feniDonateAmount">00</p>
                 <span>BDT</span>
               </div>
-              <h1 class="text-3xl font-bold">
+              <h1 class="text-3xl font-bold" id="title-feni">
                 Donate for Flood Relief in Feni,Bangladesh
               </h1>
               <p class="py-6">
@@ -143,7 +143,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="donation-section-3" class="donation-section">
         <div class="hero bg-base-200 my-10 gap-5">
           <div class="hero-content flex-col lg:flex-row">
             <img
@@ -157,7 +157,7 @@
                 <p id="quota-balance">00</p>
                 <span>BDT</span>
               </div>
-              <h1 class="text-3xl font-bold">
+              <h1 class="text-3xl font-bold" id="title-quota">
                 Aid for Injured in the Quota Movement
               </h1>
               <p class="py-6">
@@ -200,6 +200,26 @@
           </div>
         </div>
       </section>
+
+
+      <!-- History Section starts -->
+       <section id="history-section" class="hidden" >
+        <div class="p-8">
+            <h2>Donation History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Reason</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="history-table-body"></tbody>
+            </table>
+
+        </div>
+       </section>
+      <!-- History Section ends -->
 
       <dialog id="my_modal_1" class="modal">
         <div class="modal-box text-center my-5">

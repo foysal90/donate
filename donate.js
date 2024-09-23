@@ -8,6 +8,10 @@ const feniDonateAmount = document.getElementById("feniDonateAmount");
 const quotaBalance = document.getElementById("quota-balance");
 const quotaInputField = document.getElementById("quota-input-field");
 const quotaDonate = document.getElementById("quotaDonate");
+const titleNoakhali = document.getElementById("title-noakhali");
+const titleFeni = document.getElementById("title-feni");
+const titleQuota = document.getElementById("title-quota");
+
 
 let initialDonationModal = null;
 
