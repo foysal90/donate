@@ -56,9 +56,9 @@
               class="rounded-lg shadow-2xl"
             />
             <div>
-              <div class="flex gap-1 bg-zinc-300 w-28 p-2">
+              <div class="flex gap-1 bg-zinc-300 w-32 p-2">
                 <img src="./img/coin.png" class="w-6 h-6" alt="" />
-                <p>00</p>
+                <p id="noakhaliFloodDonate">00</p>
                 <span>BDT</span>
               </div>
               <h1 class="text-3xl font-bold">
@@ -77,7 +77,7 @@
                 need.
               </p>
               <input
-              id="donate-amount"
+                id="donate-amount"
                 type="text"
                 placeholder="Donation Amount"
                 class="input input-bordered input-md w-full max-w-lg rounded-lg"
@@ -105,9 +105,9 @@
               class="rounded-lg shadow-2xl"
             />
             <div>
-              <div class="flex gap-1 bg-zinc-300 w-28 p-2">
+              <div class="flex gap-1 bg-zinc-300 w-32 p-2">
                 <img src="./img/coin.png" class="w-6 h-6" alt="" />
-                <p>00</p>
+                <p id="feniDonateAmount">00</p>
                 <span>BDT</span>
               </div>
               <h1 class="text-3xl font-bold">
@@ -125,13 +125,18 @@
                 Please consider donating today to assist those in urgent need.
               </p>
               <input
+                id="feni-donate-amount"
                 type="text"
                 placeholder="Donation Amount"
-                class="input input-bordered input-md w-full max-w-lg rounded-lg"
+                class="input input-bordered input-md w-full max-w-lg rounded-lg donate-amount"
               />
               <br />
 
-              <button class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg">
+              <button
+                onclick="donateMoney(this)"
+                id="donateNowFeni"
+                class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg"
+              >
                 Donate Now
               </button>
             </div>
@@ -147,9 +152,9 @@
               class="rounded-lg shadow-2xl"
             />
             <div>
-              <div class="flex gap-1 bg-zinc-300 w-28 p-2">
+              <div class="flex gap-1 bg-zinc-300 w-32 p-2">
                 <img src="./img/coin.png" class="w-6 h-6" alt="" />
-                <p>00</p>
+                <p id="quota-balance">00</p>
                 <span>BDT</span>
               </div>
               <h1 class="text-3xl font-bold">
@@ -177,13 +182,18 @@
                 individuals in their time of need.
               </p>
               <input
+                id="quota-input-field"
                 type="text"
                 placeholder="Donation Amount"
                 class="input input-bordered input-md w-full max-w-lg rounded-lg"
               />
               <br />
 
-              <button class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg">
+              <button
+                onclick="donateMoney(this)"
+                id="quotaDonate"
+                class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg"
+              >
                 Donate Now
               </button>
             </div>
