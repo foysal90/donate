@@ -94,11 +94,7 @@ function confirmDonation() {
 }
 
 //history function
-// const donations = [
-//   { date: "2024-09-20", cause: "Flood Relief Noakhali", amount: 1000 },
-//   { date: "2024-09-18", cause: "Flood Relief Feni", amount: 500 },
-//   { date: "2024-09-15", cause: "Quota Movement Aid", amount: 2000 },
-// ];
+
 const donationBtn = document.getElementById("donation");
 const historyBtn = document.getElementById("history");
 const donationSections = document.querySelectorAll(".donation-section");
@@ -109,8 +105,20 @@ function toggle(showDonation) {
     section.style.display = showDonation ? "block" : "none";
   });
   historySection.style.display = showDonation ? "none" : "block";
-
+  
+  
   //active button
+  if (showDonation) {
+    donationBtn.classList.add("bg-[#B4F461]", "text-white");
+    donationBtn.classList.remove("bg-white", "text-black");
+    historyBtn.classList.remove("bg-[#B4F461]", "text-white");
+    historyBtn.classList.add("bg-white", "text-black");
+  } else {
+    historyBtn.classList.add("bg-[#B4F461]", "text-white");
+    historyBtn.classList.remove("bg-white", "text-black");
+    donationBtn.classList.remove("bg-[#B4F461]", "text-white");
+    donationBtn.classList.add("bg-white", "text-black");
+  }
 }
 toggle(true);
 
