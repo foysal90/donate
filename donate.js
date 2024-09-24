@@ -34,9 +34,11 @@ function donateMoney(event) {
       noakhaliFloodDonate.innerText = (
         parseFloat(noakhaliFloodDonate.innerText) + donateAmountValue
       ).toFixed(2);
+      //Clear input field
+      donateAmount.value = "";
       donations.push({
         date: currentDate,
-        cause: titleNoakhali.innerText,
+        title: titleNoakhali.innerText,
         amount: donateAmountValue,
       });
     } else {
@@ -52,16 +54,18 @@ function donateMoney(event) {
       feniDonateAmount.innerText = (
         parseFloat(feniDonateAmount.innerText) + donateAmountFeniValue
       ).toFixed(2);
+      //Clear input field
+      donateAmountFeni.value = "";
 
       donations.push({
         date: currentDate,
-        cause: titleFeni.innerText,
+        title: titleFeni.innerText,
         amount: donateAmountFeniValue,
       });
 
       // alert("donated");
     } else {
-      return alert("invalid");
+      return alert("Invalid Amount");
     }
   } else if (event.id === "quotaDonate") {
     let quotaInputFieldValue = parseFloat(quotaInputField.value) || 0;
@@ -71,13 +75,15 @@ function donateMoney(event) {
       quotaBalance.innerText = (
         parseFloat(quotaBalance.innerText) + quotaInputFieldValue
       ).toFixed(2);
+      //Clear input field
+      quotaInputField.value = "";
       donations.push({
         date: currentDate,
-        cause: titleQuota.innerText,
+        title: titleQuota.innerText,
         amount: quotaInputFieldValue,
       });
     } else {
-      return alert("invalid");
+      return alert("invalid Amount");
     }
   }
 }
@@ -145,7 +151,7 @@ function donationHistory() {
      <div class="w-full border border-zinc-300 p-5 my-5">
    <div class="flex text-4xl gap-1 font-bold">
     <p>${donation.amount} Taka is  </p> 
-    <p>${donation.cause}</p> 
+    <p>${donation.title}</p> 
     </div>
     <p class="text-xl text-gray-500">Date: ${donation.date}</p>
     

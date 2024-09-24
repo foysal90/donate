@@ -3,9 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind and daISY link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>Donation</title>
   </head>
-  <body>
-    <h1>wELCOME TO BLOG PAGE</h1>
+  <body class="bg-white text-black min-h-screen">
+    <nav
+      class="sticky top-5 bg-orange-100 bg-transparent p-5 shadow-lg z-10 bg-opacity-100"
+    >
+      <header>
+        <div class="flex justify-between m-8">
+          <button id="home" class="btn btn-primary">Home</button>
+          <div class="flex gap-2">
+            <img class="w-6 h-6" src="./img/logo.png" alt="logo" />
+            <h2>Donate Bangladesh</h2>
+          </div>
+          <div class="flex gap-1">
+            <img class="w-7 h-7" src="./img/coin.png" alt="coin" />
+            <h4 id="initial-amount">5500</h4>
+            <span>BDT</span>
+          </div>
+        </div>
+      </header>
+    </nav>
+    <main>
+      <h1 class="text-5xl font-bold mt-20">Important FAQ</h1>
+      <section class="my-10 border border-blue-500 m-10">
+        <div class="collapse collapse-arrow">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <input type="text" id="dom"  placeholder="Write Your Answer Here...."
+            class="w-[670px] p-2 rounded-lg bg-white border " />
+          </div>
+        </div>
+      </section>
+      <section class="my-10 border border-blue-500 m-10">
+        <div class="collapse collapse-arrow">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <input type="text" id="dom"  placeholder="Write Your Answer Here...."
+            class="w-[670px] p-2 rounded-lg bg-white border " />
+          </div>
+        </div>
+      </section>
+      <section class="my-10 border border-blue-500 m-10">
+        <div class="collapse collapse-arrow">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <input
+              type="text"
+              id="dom"
+              placeholder="Write Your Answer Here...."
+              class="w-[670px] p-2 rounded-lg bg-white border "
+            />
+          </div>
+        </div>
+      </section>
+      <section class="my-10 border border-blue-500 m-10">
+        <div class="collapse collapse-arrow">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <input
+              type="text"
+              id="dom"
+              placeholder="Write Your Answer Here...."
+              class="w-[670px] p-2 rounded-lg bg-white border "
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="blog.js"></script>
   </body>
 </html>
