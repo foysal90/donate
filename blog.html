@@ -12,16 +12,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Donation</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: " #B4F461",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body class="max-w-screen-xl mx-auto bg-white">
     <nav
       class="sticky top-5 bg-orange-100 bg-transparent p-5 shadow-lg z-10 bg-opacity-100"
     >
       <header>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-3 lg:flex justify-between gap-4 m-4 md:m-8"
-        >
-          <button id="home" class="btn btn-primary">Home</button>
+        <div class="flex justify-between gap-4 my-8">
+          <button id="home" class="btn bg-primary">Home</button>
           <div class="flex gap-2">
             <img class="w-6 h-6" src="./img/logo.png" alt="logo" />
             <h2>Donate Bangladesh</h2>
@@ -35,7 +44,7 @@
       </header>
     </nav>
     <main>
-      <h1 class="text-4xl sm:text-2xl font-bold mt-20 ml-5">Important FAQ</h1>
+      <h1 class="text-4xl sm:text-2xl font-bold mt-20 ml-10">Important FAQ</h1>
       <section class="my-10 border border-blue-500 m-10">
         <div class="collapse collapse-arrow">
           <input type="radio" name="my-accordion-2" checked="checked" />

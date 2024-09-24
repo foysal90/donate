@@ -12,23 +12,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Donation</title>
-    <!-- <script>
+    <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              clifford: "#da373d",
+              primary:' #B4F461'
             },
           },
         },
       };
-    </script> -->
+    </script>
   </head>
   <body class="max-w-screen-xl mx-auto bg-white">
     <nav class="sticky top-5 bg-transparent p-5 shadow-lg z-10 bg-opacity-100">
       <header>
         <div class="grid grid-cols-1 sm:grid-cols-3 lg:flex justify-between gap-4 m-4 md:m-8">
-          <button id="blog" class="btn btn-primary">Blog</button>
+          <button id="blog" class="btn bg-primary">Blog</button>
           <div class="flex gap-2">
             <img class="w-6 h-6" src="./img/logo.png" alt="logo" />
             <h2>Donate Bangladesh</h2>
@@ -42,7 +42,7 @@
       </header>
       <!-- donation and history part -->
       <div class="text-center">
-        <button id="donation" class="btn bg-[#B4F461]  mr-5">Donation</button>
+        <button id="donation" class="btn  mr-5">Donation</button>
         <button id="history" class="btn">History</button>
       </div>
     </nav>
@@ -87,7 +87,7 @@
               <button
                 onclick="openModal('donateNow')"
                 id="donateNow"
-                class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg"
+                class="btn bg-primary w-11/12 mt-5 rounded-lg"
               >
                 Donate Now
               </button>
