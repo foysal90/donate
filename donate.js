@@ -148,12 +148,12 @@ function donationHistory() {
   tableBody.innerHTML = "";
   donations.forEach((donation) => {
     const row = `
-     <div class="w-full border border-zinc-300 p-5 my-5">
-   <div class="flex text-4xl gap-1 font-bold">
-    <p>${donation.amount} Taka is  </p> 
-    <p>${donation.title}</p> 
+     <div class="w-full border border-zinc-300 p-5 my-3 sm:my-5">
+   <div class="flex   text-4xl sm:text-xl gap-1 font-bold">
+    <p>${donation.amount} Taka is <span>${donation.title}</span> </p> 
+    
     </div>
-    <p class="text-xl text-gray-500">Date: ${donation.date}</p>
+    <p class="text-xl my-2 text-gray-500">Date: ${donation.date}</p>
     
      </div>
 
