@@ -12,11 +12,12 @@ const titleNoakhali = document.getElementById("title-noakhali");
 const titleFeni = document.getElementById("title-feni");
 const titleQuota = document.getElementById("title-quota");
 const blogBtn = document.getElementById("blog");
-
+//navigate to blog page
 blogBtn.addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
 
+//initial modal
 let initialDonationModal = null;
 
 //donation history
@@ -88,6 +89,7 @@ function donateMoney(event) {
   }
 }
 
+//toggle
 function openModal(eventId) {
   initialDonationModal = eventId;
   const modal = document.getElementById("my_modal_1");
@@ -123,7 +125,7 @@ function toggle(showDonation) {
     donationBtn.classList.add("bg-[#B4F461]", "text-black");
     donationBtn.classList.remove("bg-white", "text-black");
     historyBtn.classList.remove("bg-[#B4F461]", "text-black");
-    historyBtn.classList.add("bg-white", "text-black", );
+    historyBtn.classList.add("bg-white", "text-black");
   } else {
     historyBtn.classList.add("bg-[#B4F461]", "text-black");
     historyBtn.classList.remove("bg-black", "text-black");
@@ -143,9 +145,10 @@ historyBtn.addEventListener("click", function () {
   donationHistory();
 });
 
+//showing history
 function donationHistory() {
-  const tableBody = document.getElementById("history-table-body");
-  tableBody.innerHTML = "";
+  const historyBody = document.getElementById("history-body");
+  historyBody.innerHTML = "";
   donations.forEach((donation) => {
     const row = `
      <div class="w-full border border-zinc-300 p-5 my-3 sm:my-5">
@@ -160,6 +163,6 @@ function donationHistory() {
     
     
 `;
-    tableBody.innerHTML += row;
+    historyBody.innerHTML += row;
   });
 }
