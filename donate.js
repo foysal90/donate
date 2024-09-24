@@ -11,6 +11,11 @@ const quotaDonate = document.getElementById("quotaDonate");
 const titleNoakhali = document.getElementById("title-noakhali");
 const titleFeni = document.getElementById("title-feni");
 const titleQuota = document.getElementById("title-quota");
+const blogBtn = document.getElementById("blog");
+
+blogBtn.addEventListener("click", function () {
+  window.location.href = "./blog.html";
+});
 
 let initialDonationModal = null;
 
@@ -19,7 +24,8 @@ const donations = [];
 
 function donateMoney(event) {
   let initialFund = parseFloat(initialAmount.innerText) || 0;
-  const currentDate = new Date().toLocaleDateString();
+  const currentDate = new Date();
+
   if (event.id === "donateNow") {
     let donateAmountValue = parseFloat(donateAmount.value) || 0;
     if (donateAmountValue > 0 && donateAmountValue <= initialFund) {
@@ -105,8 +111,7 @@ function toggle(showDonation) {
     section.style.display = showDonation ? "block" : "none";
   });
   historySection.style.display = showDonation ? "none" : "block";
-  
-  
+
   //active button
   if (showDonation) {
     donationBtn.classList.add("bg-[#B4F461]", "text-white");
@@ -136,11 +141,19 @@ function donationHistory() {
   const tableBody = document.getElementById("history-table-body");
   tableBody.innerHTML = "";
   donations.forEach((donation) => {
-    const row = `<tr>
-    <td>${donation.date}</td>
-    <td>${donation.cause}</td>
-    <td>${donation.amount}</td>
-</tr>`;
+    const row = `
+     <div class="w-full border border-zinc-300 p-5 my-5">
+   <div class="flex text-4xl gap-1 font-bold">
+    <p>${donation.amount} Taka is  </p> 
+    <p>${donation.cause}</p> 
+    </div>
+    <p class="text-xl text-gray-500">Date: ${donation.date}</p>
+    
+     </div>
+
+    
+    
+`;
     tableBody.innerHTML += row;
   });
 }
