@@ -28,8 +28,8 @@
     <nav class="sticky top-5 bg-transparent p-5 shadow-lg z-10 bg-opacity-100">
       <header>
         <div class="flex justify-between gap-4 my-8">
-          <button id="blog" class="btn bg-primary ">Blog</button>
-          <div class="flex gap-2">
+          <button id="blog" class="btn bg-primary hover:bg-lime-300">Blog</button>
+          <div class="flex gap-2 mt-2 ">
             <img class="w-4 h-4 md:w-6 md:h-6" src="./img/logo.png" alt="logo" />
             <h2 class="text-xs md:text-2xl">Donate Bangladesh</h2>
           </div>
@@ -43,12 +43,60 @@
       <!-- donation and history part -->
       <div class="text-center">
         <button id="donation" class="btn  mr-5">Donation</button>
-        <button id="history" class="btn">History</button>
+        <button id="history" class="btn ">History</button>
       </div>
     </nav>
     <main>
-      <section id="donation-section-1" class="donation-section my-14  shadow-md" 
-        <div class="hero bg-red-500 my-14 gap-5">
+      <section id="donation-section-1" class="donation-section my-14  shadow-md" >
+        <div class="hero gap-5">
+          <div class="hero-content flex-col lg:flex-row">
+            <img
+              src="./img/noakhali.png"
+              alt="donate"
+              class="rounded-lg shadow-2xl"
+            />
+            <div>
+              <div class="flex gap-1 bg-zinc-300 w-32 p-2">
+                <img src="./img/coin.png" class="w-6 h-6" alt="" />
+                <p id="noakhaliFloodDonate">00</p>
+                <span>BDT</span>
+              </div>
+              <h1 class="text-3xl font-bold" id="title-noakhali">
+                Donate for Flood at Noakhali, Bangladesh
+              </h1>
+              <p class="py-6">
+                The recent floods in Noakhali have caused significant damage to
+                <br />
+                homes infrastructure. Your donation will help provide essential
+                <br />
+                supplies and to those affected by this disaster. Every
+                contribution, <br />
+                big or small, makes difference. Please join us in supporting the
+                relief <br />
+                efforts and making a positive impact on the lives of those in
+                need.
+              </p>
+              <input
+              id="donate-amount"
+              type="text"
+              placeholder="Donation Amount"
+              class="input input-bordered bg-white input-md w-full max-w-lg rounded-lg"
+            />
+            <br />
+
+            <button
+              onclick="openModal('donateNow')"
+              id="donateNow"
+              class="btn bg-primary text-green-700 text-2xl italic font-bold w-[518px] mt-5 rounded-lg hover:bg-lime-300"
+            >
+              Donate Now
+            </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="donation-section-1" class="donation-section my-14  shadow-md" 
+        <div class="hero gap-5">
           <div class="hero-content flex-col lg:flex-row">
             <img
               src="./img/noakhali.png"
@@ -87,20 +135,20 @@
               <button
                 onclick="openModal('donateNow')"
                 id="donateNow"
-                class="btn bg-primary w-11/12 mt-5 rounded-lg"
+                class="btn bg-primary text-green-700 text-2xl italic font-bold w-[518px] mt-5 rounded-lg hover:bg-lime-300"
               >
                 Donate Now
               </button>
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section id="donation-section-2" class="donation-section" >
         <div class="hero gap-5">
           <div class="hero-content flex-col lg:flex-row">
             <img
-              src="./img/noakhali.png"
+              src="./img/feni.png"
               alt="donate"
               class="rounded-lg shadow-2xl"
             />
@@ -128,13 +176,14 @@
                 id="feni-donate-amount"
                 type="text"
                 placeholder="Donation Amount"
-                class="input input-bordered input-md w-full max-w-lg rounded-lg donate-amount"
+                class="input input-bordered bg-white input-md w-full max-w-lg rounded-lg donate-amount"
+                
               />
               <br />
 
               <button
                 onclick="openModal('donateNowFeni')"
-                id="donateNowFeni" class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg">
+                id="donateNowFeni"  class="btn bg-primary text-green-700 text-2xl italic font-bold w-[518px] mt-5 rounded-lg hover:bg-lime-300">
                 Donate Now
               </button>
             </div>
@@ -183,14 +232,14 @@
                 id="quota-input-field"
                 type="text"
                 placeholder="Donation Amount"
-                class="input input-bordered input-md w-full max-w-lg rounded-lg"
+                class="input input-bordered bg-white input-md w-full max-w-lg rounded-lg"
               />
               <br />
 
               <button
                 onclick="openModal('quotaDonate')"
                 id="quotaDonate"
-                class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg"
+                class="btn bg-primary text-green-700 text-2xl italic font-bold w-[518px] mt-5 rounded-lg hover:bg-lime-300"
               >
                 Donate Now
               </button>
@@ -203,7 +252,7 @@
       <!-- History Section starts -->
        <section id="history-section" class="hidden" >
         <div class="p-8">
-            <h2>Donation History</h2>
+            <h2 class="text-5xl font-bold text-center my-5">Donation History</h2>
            
               
                 <ul id="history-table-body" class="block"></ul>
@@ -219,11 +268,11 @@
           <img src="./img/coin.png" class="w-6 h-6 mx-auto" alt="coin" />
           <span
             >Your Donation Has been Proceed <br>
-            <h3 class="text-4xl text-green-500">Successfully</h3></span
+            <h3 class="text-4xl text-green-500 font-extrabold">Successfully</h3></span
           >
 
-          <div ">
-            <button class="btn btn-ghost text-center w-1/2 my-5 bg-slate-200" onclick="confirmDonation()">Confirm Donate</button>
+          <div>
+            <button class="btn bg-primary text-center w-1/2 my-5   hover:bg-lime-300" onclick="confirmDonation()">Confirm Donate</button>
           </div>
         </div>
       </dialog>
