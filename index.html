@@ -28,7 +28,7 @@
     <nav class="sticky top-5 bg-transparent p-5 shadow-lg z-10 bg-opacity-100">
       <header>
         <div class="flex justify-between gap-4 my-8">
-          <button id="blog" class="btn bg-primary ">Blog</button>
+          <button id="blog" class="w-14 md:w-20 rounded-lg border border-green-400 hover:bg-lime-200 bg-primary ">Blog</button>
           <div class="flex gap-2 mt-2 ">
             <img class="w-4 h-4 md:w-6 md:h-6" src="./img/logo.png" alt="logo" />
             <h2 class="text-xs md:text-2xl">Donate Bangladesh</h2>
@@ -42,13 +42,13 @@
       </header>
       <!-- donation and history part -->
       <div class="text-center">
-        <button id="donation" class="btn  mr-5">Donation</button>
-        <button id="history" class="btn">History</button>
+        <button id="donation" class="w-28 h-10 rounded-xl border border-green-400 hover:bg-lime-200 mr-5">Donation</button>
+        <button id="history" class="w-28 h-10 rounded-xl border border-green-400 hover:bg-lime-300">History</button>
       </div>
     </nav>
     <main>
-      <section id="donation-section-1" class="donation-section my-14  shadow-md" 
-        <div class="hero bg-red-500 my-14 gap-5">
+      <section id="donation-section-1" class="donation-section my-14 " 
+        <div class="hero my-14 gap-5">
           <div class="hero-content flex-col lg:flex-row">
             <img
               src="./img/noakhali.png"
@@ -87,7 +87,7 @@
               <button
                 onclick="openModal('donateNow')"
                 id="donateNow"
-                class="btn bg-primary w-11/12 mt-5 rounded-lg"
+                class="h-10 bg-primary w-full md:w-11/12 mt-5 rounded-lg hover:bg-lime-400"
               >
                 Donate Now
               </button>
@@ -135,7 +135,7 @@
 
               <button
                 onclick="openModal('donateNowFeni')"
-                id="donateNowFeni" class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg">
+                id="donateNowFeni" class="h-10 bg-primary w-full md:w-11/12 mt-5 rounded-lg hover:bg-lime-400">
                 Donate Now
               </button>
             </div>
@@ -191,7 +191,7 @@
               <button
                 onclick="openModal('quotaDonate')"
                 id="quotaDonate"
-                class="btn bg-[#B4F461] w-11/12 mt-5 rounded-lg"
+                class="h-10 bg-primary w-full mt-5 rounded-lg hover:bg-lime-400"
               >
                 Donate Now
               </button>
@@ -202,7 +202,7 @@
 
 
       <!-- History Section starts -->
-       <section id="history-section" class="hidden" >
+       <section id="history-section" class="hidden text-lime-950" >
         <div class="p-8">
             <h2 class="text-5xl font-bold text-center my-5">Donation History</h2>
            
@@ -215,16 +215,16 @@
       <!-- History Section ends -->
 
       <dialog id="my_modal_1" class="modal">
-        <div class="modal-box text-center my-5">
-          <h3 class="font-bold text-4xl">Congratulations!</h3>
+        <div class="modal-box bg-white text-center my-5">
+          <h3 class="font-bold text-4xl text-lime-600">Congratulations!</h3>
           <img src="./img/coin.png" class="w-6 h-6 mx-auto" alt="coin" />
-          <span
+          <span class="text-lime-700"
             >Your Donation Has been Proceed <br>
             <h3 class="text-4xl text-green-500">Successfully</h3></span
           >
 
           <div ">
-            <button class="btn btn-ghost text-center w-1/2 my-5 bg-slate-200" onclick="confirmDonation()">Confirm Donate</button>
+            <button class="bg-primary hover:bg-lime-400 rounded-lg text-center w-1/2 h-8 my-5 " onclick="confirmDonation()">Confirm Donate</button>
           </div>
         </div>
       </dialog>
