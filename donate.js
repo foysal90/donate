@@ -166,3 +166,17 @@ function donationHistory() {
     historyBody.innerHTML += row;
   });
 }
+
+//navbar blur when scroll
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", function () {
+  if (window.screenY > 0) {
+    navbar.classList.add("backdrop-blur-md", "bg-transparent", "bg-opacity-80");
+  } else {
+    navbar.classList.remove(
+      "backdrop-blur-lg",
+      "bg-transparent",
+      "bg-opacity-80"
+    );
+  }
+});
