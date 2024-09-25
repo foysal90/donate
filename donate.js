@@ -29,6 +29,7 @@ function donateMoney(event) {
 
   if (event.id === "donateNow") {
     let donateAmountValue = parseFloat(donateAmount.value) || 0;
+
     if (donateAmountValue > 0 && donateAmountValue <= initialFund) {
       initialFund -= donateAmountValue;
       initialAmount.innerText = initialFund.toFixed(2);
@@ -43,7 +44,9 @@ function donateMoney(event) {
         amount: donateAmountValue,
       });
     } else {
-      return alert("invalid Amount");
+      return alert(
+        "Please Enter A valid Positive number in order to make donation"
+      );
     }
   } else if (event.id === "donateNowFeni") {
     //donation for feni flood
@@ -66,7 +69,9 @@ function donateMoney(event) {
 
       // alert("donated");
     } else {
-      return alert("Invalid Amount");
+      return alert(
+        "Please Enter A valid Positive number in order to make donation"
+      );
     }
   } else if (event.id === "quotaDonate") {
     let quotaInputFieldValue = parseFloat(quotaInputField.value) || 0;
@@ -84,7 +89,9 @@ function donateMoney(event) {
         amount: quotaInputFieldValue,
       });
     } else {
-      return alert("invalid Amount");
+      return alert(
+        "Please Enter A valid Positive number in order to make donation"
+      );
     }
   }
 }
